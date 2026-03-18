@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Shifa Medical Store - Your Trusted Neighborhood Pharmacy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #0A8F5A;
+            --secondary: #E6F4EA;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(10, 143, 90, 0.8), rgba(10, 143, 90, 0.8)), 
+                        url('https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .review-card {
+            background-color: var(--secondary);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-prescription-bottle-alt text-3xl text-green-600 mr-3"></i>
+                <h1 class="text-2xl font-bold text-green-800">Al-Shifa Medical Store</h1>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-green-600 font-medium">Home</a></li>
+                    <li><a href="#about" class="nav-link text-gray-700 hover:text-green-600 font-medium">About</a></li>
+                    <li><a href="#services" class="nav-link text-gray-700 hover:text-green-600 font-medium">Services</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-700 hover:text-green-600 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <ul class="space-y-3">
+                <li><a href="#home" class="block py-2 text-gray-700 hover:text-green-600 font-medium">Home</a></li>
+                <li><a href="#about" class="block py-2 text-gray-700 hover:text-green-600 font-medium">About</a></li>
+                <li><a href="#services" class="block py-2 text-gray-700 hover:text-green-600 font-medium">Services</a></li>
+                <li><a href="#contact" class="block py-2 text-gray-700 hover:text-green-600 font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Trusted Neighborhood Pharmacy</h1>
+            <p class="text-xl md:text-2xl mb-8">Quality Medicines, Reliable Care</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+923001234567" class="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-green-600 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">About Al-Shifa Medical Store</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Pharmacy interior" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Serving Nazimabad with Care Since 2005</h3>
+                    <p class="text-gray-700 mb-4">Al-Shifa Medical Store has been a trusted name in the Nazimabad community for nearly two decades. We take pride in providing quality medicines and healthcare products to our valued customers.</p>
+                    <p class="text-gray-700 mb-4">Our commitment to excellence and customer satisfaction has made us the preferred pharmacy in the area. We understand that your health is precious, and we treat every prescription with the utmost care and attention.</p>
+                    <p class="text-gray-700">Our knowledgeable staff is always ready to assist you with your healthcare needs, offering professional advice and personalized service.</p>
+                    
+                    <div class="mt-8 flex items-center">
+                        <div class="bg-green-100 p-4 rounded-full mr-4">
+                            <i class="fas fa-heartbeat text-3xl text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-800">Our Promise</h4>
+                            <p class="text-gray-700">Authentic medicines, fair prices, and compassionate service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer a comprehensive range of pharmaceutical services to meet all your healthcare needs</p>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border-t-4 border-green-600">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-prescription text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Prescription Medicines</h3>
+                    <p class="text-gray-700">We provide all prescribed medications with proper guidance on usage and dosage from our qualified pharmacists.</p>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border-t-4 border-green-600">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-pills text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Over-the-Counter Medicines</h3>
+                    <p class="text-gray-700">A wide selection of OTC medications for common ailments like cold, fever, pain, and allergies.</p>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border-t-4 border-green-600">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-heartbeat text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Health Products</h3>
+                    <p class="text-gray-700">Vitamins, supplements, first aid supplies, and other healthcare essentials for your family's wellbeing.</p>
+                </div>
+                
+                <div class="service-card bg-white p-6 rounded-lg shadow-md border-t-4 border-green-600">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-thermometer text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Medical Supplies</h3>
+                    <p class="text-gray-700">Basic medical equipment and supplies including blood pressure monitors, thermometers, and diabetic care products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">MA</div>
+                        <div>
+                            <h4 class="font-semibold">Muhammad Ashraf</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Good dealing and service. The staff is very cooperative and provides genuine medicines. I've been coming here for years and never had any issues."</p>
+                </div>
+                
+                <div class="review-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">US</div>
+                        <div>
+                            <h4 class="font-semibold">Unzila Shamimuddin</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Good service and helpful staff. They always have the medicines I need and provide proper guidance about usage. Very reliable pharmacy in Nazimabad."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600">Visit us or get in touch for all your healthcare needs</p>
+                <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.234647315038!2d67.0288143150099!3d24.9305229840225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sNazimabad%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1689876543210!5m2!1sen!2s" 
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-green-800 mb-6">Visit Our Store</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Address</h4>
+                                    <p class="text-gray-700">4F 6/7 Block 4, Nazimabad, Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-green-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone</h4>
+                                    <p class="text-gray-700">+92 300 1234567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-green-600 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Opening Hours</h4>
+                                    <p class="text-gray-700">Daily: 11:00 AM - 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 space-y-4">
+                            <a href="tel:+923001234567" class="block bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Call Now
+                            </a>
+                            
+                            <a href="https://wa.me/923001234567" class="block whatsapp-btn text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 text-center">
+                                <i class="fab fa-whatsapp mr-2"></i> Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923001234567" class="fixed bottom-6 right-6 whatsapp-btn text-white text-2xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-prescription-bottle-alt text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold">Al-Shifa Medical Store</h2>
+                    </div>
+                    <p class="mt-2 text-green-200">Your Trusted Neighborhood Pharmacy</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-green-300 text-xl">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-green-300 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/923001234567" class="text-white hover:text-green-300 text-xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-700 mt-6 pt-6 text-center text-green-200">
+                <p>&copy; 2026 Al-Shifa Medical Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Change header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
